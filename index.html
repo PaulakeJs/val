@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 10px 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 20px auto;
+      max-width: 600px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    section {
+      padding: 60px 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    button {
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #c0392b;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Specific Section Styles */
+    #home {
+      background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #shanghai {
+      background-image: url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    }
+
+    #nyc {
+      background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    }
+
+    #paris {
+      background-image: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    }
+
+    #question {
+      background-image: url('https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #thank-you {
+      background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Home Section -->
+  <section id="home" class="fade-in">
+    <h1>Will You Be My Valentine?</h1>
+    <p>Join me on a journey to Shanghai, New York City, and Paris... and let’s create memories that will last a lifetime.</p>
+    <button onclick="scrollToSection('shanghai')">Say Yes to the Adventure</button>
+  </section>
+
+  <!-- Shanghai Section -->
+  <section id="shanghai" class="fade-in">
+    <h2>Our Journey Begins in Shanghai</h2>
+    <p>Shanghai: Where the lights shine as bright as my feelings for you. Let’s explore the vibrant streets, enjoy delicious food, and take a romantic cruise on the Huangpu River.</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Shanghai Skyline">
+      <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Shanghai Food">
+      <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Shanghai Couple">
+    </div>
+    <button onclick="scrollToSection('nyc')">Next Stop: New York City</button>
+  </section>
+
+  <!-- NYC Section -->
+  <section id="nyc" class="fade-in">
+    <h2>The Magic of New York City</h2>
+    <p>New York City: The city that never sleeps, just like my heart when I think of you. Let’s walk through Central Park, see a Broadway show, and enjoy the view from the Top of the Rock.</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="NYC Skyline">
+      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="NYC Central Park">
+      <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="NYC Couple">
+    </div>
+    <button onclick="scrollToSection('paris')">Next Stop: Paris</button>
+  </section>
+
+  <!-- Paris Section -->
+  <section id="paris" class="fade-in">
+    <h2>Love in Paris</h2>
+    <p>Paris: The city of love, where every moment feels like a dream. Let’s stroll along the Seine, visit the Louvre, and share a kiss under the Eiffel Tower.</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Paris Eiffel Tower">
+      <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Paris Restaurant">
+      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Paris Couple">
+    </div>
+    <button onclick="scrollToSection('question')">Will You Be My Valentine?</button>
+  </section>
+
+  <!-- Question Section -->
+  <section id="question" class="fade-in">
+    <h1>I can’t imagine exploring these beautiful cities with anyone but you.</h1>
+    <p>Will you be my Valentine and make this dream come true?</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Romantic Dinner">
+      <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Movie Night">
+      <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Happy Couple">
+    </div>
+    <button onclick="showThankYou()">Yes, I’ll Be Your Valentine!</button>
+  </section>
+
+  <!-- Thank You Section -->
+  <section id="thank-you" class="fade-in" style="display: none;">
+    <h1>You’ve made me the happiest person in the world!</h1>
+    <p>Get ready for the adventure of a lifetime. I can’t wait to create unforgettable memories with you.</p>
+  </section>
+
+  <script>
+    // Smooth scrolling to sections
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Show thank-you section
+    function showThankYou() {
+      document.getElementById('question').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
